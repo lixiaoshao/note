@@ -1,0 +1,26 @@
+redis是key-value存储系统，提供多种语言的API，值可以是String,哈希(Map),列表(list),集合(sets),有序集合(sorted sets)
+1.redis安装：make 编译目标文件后在src下生成服务程序redis-server,客户端程序redis-cli
+启动redis服务：./redis-server redis.conf(默认配置文件)
+------一般情况下做如下调整：
+1> cp程序文件到/usr/local/bin/下：
+	cp redis-server /usr/local/bin/
+	cp redis-cli /usr/local/bin/
+2> 新建目录，存放配置文件:
+	mkdir /etc/redis
+	mkdir /var/redis
+	mkdir /var/redis/log
+	mkdir /var/redis/run
+	mkdir /var/redis/666
+3> 在redis解压根目录中找到配置文件模板
+	cp redis.conf /etc/redis/redis.conf
+4> 通过vim命令修改redis.conf文件
+	daemonize yes
+	pidfile /var/redis/run/redis.pid
+	logfile /var/redis/log/redis.log
+	dir /var/redis/666
+5> 运行redis：
+	redis-server /etc/redis/redis.conf
+
+
+
+
