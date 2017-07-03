@@ -90,6 +90,19 @@ http://www.redis.net.cn/tutorial/3517.html
 13> redis服务器
 常用的管理服务器的命令：
 http://www.redis.net.cn/tutorial/3518.html
+14> redis 数据备份与恢复
+	创建当前数据库备份：save(会在redis安装目录中创建dump.rdb文件)
+	获得redis安装目录：config get dir
+	将备份的dump.rdb文件移动到redis的安装目录即可实现数据的恢复
+	其中bgsave可实现数据备份
+15> redis设置密码
+	config get requirepass
+	config set requirepass lijianpeng
+	设置密码后不能执行命令：执行auth lijianpeng就可以了
+16> 性能测试提示命令不存在！
+17> 客户端连接
+18> redis管道技术：
+Redis 管道技术可以在服务端未响应时，客户端可以继续向服务端发送请求，并最终一次性读取所有服务端的响应。
 
 
 
